@@ -1,0 +1,46 @@
+Sales and Operations Planning Project (Zero Stock Level Strategy)
+Overview
+This Python program simulates a Sales and Operations Planning (S&OP) process using the Zero Stock Level Strategy. The program computes the required production quantities over a specified number of months based on user inputs for the initial stock level and planned sales quantities for each month. The goal is to ensure stock levels are managed effectively by aligning production quantities with sales demands.
+
+Key Features
+Initial Stock Input: The user enters the initial stock level for the product.
+Monthly Planning: The user specifies the number of months for the planning horizon.
+Planned Sales Input: For each month, the user provides the planned sales quantity.
+Production Calculation: The program calculates the production quantities based on the zero-stock level strategy:
+If the planned sales quantity is less than or equal to the stock level from the previous month, the production quantity is set to 0.
+If the planned sales quantity exceeds the stock level, the production quantity is the difference required to meet the sales target while maintaining zero stock after the month.
+Input and Output
+Input:
+Initial Stock Level: The starting inventory for the first month.
+Number of Months: The duration for which the plan is to be created.
+Planned Sales Quantities: The expected sales quantities for each month.
+Output:
+Production Quantities: The program outputs the required production quantity for each month based on the sales quantities and stock levels.
+
+Example Execution
+Here’s an example of how the program works:
+
+Please enter an initial stock level: 500
+
+Please enter the number of months to plan: 5
+
+Please enter the planned sales quantity for month 1: 300
+Please enter the planned sales quantity for month 2: 250
+Please enter the planned sales quantity for month 3: 200
+Please enter the planned sales quantity for month 4: 400
+Please enter the planned sales quantity for month 5: 100
+The resulting production quantities are:
+
+
+Production quantity for month 1: 0
+Production quantity for month 2: 50
+Production quantity for month 3: 200
+Production quantity for month 4: 400
+Production quantity for month 5: 100
+Explanation
+The initial stock level is 500.
+In Month 1, 300 units are sold, so no production is needed (500 - 300 = 200 stock remains).
+In Month 2, 250 units are sold, but there are only 200 units in stock. Therefore, 50 units must be produced (200 + 50 - 250 = 0 stock remains).
+In Month 3, 200 units are sold, but the stock level is 0, so 200 units must be produced to meet demand (0 + 200 - 200 = 0 stock remains).
+In Month 4, 400 units are sold, and since there’s no stock left from the previous month, 400 units are produced (0 + 400 - 400 = 0 stock remains).
+In Month 5, 100 units are sold, requiring 100 units of production to maintain zero stock (0 + 100 - 100 = 0 stock remains).
